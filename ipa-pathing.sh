@@ -10,7 +10,7 @@ function quit {
 ###
 IPA="/path/myapp.ipa"
 MOBILEPROVISION="/path/embedded.mobileprovision"
-SIGNIDENTITY="11AAB23344CC22DD3FD023372312A600AA11DA78"
+SIGN_IDENTITY="11AAB23344CC22DD3FD023372312A600AA11DA78"
 BUNDLE_ID="com.mysite.myapp"
 
 ###
@@ -78,7 +78,7 @@ zip -qr "${OUTFILE}" Payload > /dev/null
 ###
 # Signing
 ###
-${APPLESIGN} -r -all -b "${BUNDLE_ID}" -B -i "${SIGNIDENTITY}" -m "${MOBILEPROVISION}" -c "${OUTFILE}"
+${APPLESIGN} -r -all -b "${BUNDLE_ID}" -B -i "${SIGN_IDENTITY}" -m "${MOBILEPROVISION}" -c "${OUTFILE}"
 
 ###
 # Deploying
