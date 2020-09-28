@@ -1,6 +1,6 @@
 # ipa-patching.sh
 
-The ipa-patching.sh script patches the app's IPA and signs the code to load `FridaGadget.dylib` on start.
+The `ipa-patching.sh` script patches the app's IPA and signs the code to load `FridaGadget.dylib` on start without jailbreak.
 
 # Dependencies
 
@@ -19,6 +19,7 @@ Before patching IPA, you need to set a number of variables.
 - `IPA` - path to the IPA file that needs to be patched.
 - `MOBILEPROVISION` - path to your .mobileprovision file, how to generate it see [here]().
 - `SIGN_IDENTITY` - your code sign identity, can be found like this:
+
     ```bash
     $ security find-identity -v -p codesigning
     
