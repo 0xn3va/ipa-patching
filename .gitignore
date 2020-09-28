@@ -1,0 +1,4 @@
+# idea dir
+.idea/
+# macOS folder custom attrs
+.DS_Store
