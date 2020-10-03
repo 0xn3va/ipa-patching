@@ -17,7 +17,7 @@ Before patching IPA, you need to set a number of variables.
 ## Main variables
 
 - `IPA` - path to the IPA file that needs to be patched.
-- `MOBILEPROVISION` - path to your .mobileprovision file, how to generate it see [here]().
+- `MOBILEPROVISION` - path to your .mobileprovision file, how to generate it see [here](https://0xn3va.gitbook.io/cheat-sheets/ios-application/getting-started/ipa-patching).
 - `SIGN_IDENTITY` - your code sign identity, can be found like this:
 
     ```bash
@@ -28,6 +28,7 @@ Before patching IPA, you need to set a number of variables.
     
     # 11AA22BB*** - code sign identity
     ```
+
 - `BUNDLE_ID` - your bundle id.
 
 ## Extra variables
