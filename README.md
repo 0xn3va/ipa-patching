@@ -33,6 +33,7 @@ Before patching IPA, you need to set a number of variables.
 
 ## Extra variables
 
+- `VERBOSE` - verbose mode.
 - `FRIDA_URL` - link to Frida's gadget, supports `file://` scheme for local files.
 
 ## Patching
