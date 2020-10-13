@@ -39,7 +39,7 @@ FRIDA_FILENAME="${FRIDA_URL##*/}"
 FRIDA_PATH="${TOOLS_DIR}/${FRIDA_FILENAME}"
 OUTFILE="patched-app.ipa"
 
-echo "IPA patching started..."
+echo "[+] IPA patching started..."
 
 if [ ! -d "$TOOLS_DIR" ]; then
   echo "[+] Installing dependencies"
@@ -86,7 +86,8 @@ echo "[+] Injecting Frida Gadget"
 ###
 # Replacing bundle id in plugins
 ###
-{
+if [ -d "PlugIns" ]; then
+  {
   cd PlugIns || crash
   for PLUGIN in *; do
     if [ -d "${PLUGIN}" ]; then
@@ -94,7 +95,8 @@ echo "[+] Injecting Frida Gadget"
       plutil -replace CFBundleIdentifier -string "${BUNDLE_ID}.${BUNDLE_NAME}" "${PLUGIN}/Info.plist"
     fi
   done
-} > /dev/null || crash
+  } > /dev/null || crash
+fi
 
 ###
 # Repacking

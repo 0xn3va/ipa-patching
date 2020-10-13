@@ -29,7 +29,7 @@ Before patching IPA, you need to set a number of variables.
     # 11AA22BB*** - code sign identity
     ```
 
-- `BUNDLE_ID` - your bundle id.
+- `BUNDLE_ID` - your bundle id from .mobileprovision file.
 
 ## Extra variables
 
