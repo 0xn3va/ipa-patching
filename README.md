@@ -30,11 +30,11 @@ Before patching IPA, you need to set a number of variables.
     ```
 
 - `BUNDLE_ID` - your bundle id from .mobileprovision file.
+- `FRIDA_URL` - link to Frida's gadget, supports `file://` scheme for local files. You can find up-to-date gadgets at [https://github.com/frida/frida/releases](https://github.com/frida/frida/releases)
 
 ## Extra variables
 
 - `VERBOSE` - verbose mode.
-- `FRIDA_URL` - link to Frida's gadget, supports `file://` scheme for local files.
 
 ## Patching
 

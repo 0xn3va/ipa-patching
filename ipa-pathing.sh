@@ -6,7 +6,7 @@ function crash {
 }
 
 function quit {
-  echo "[+] Done"
+  echo "[*] Done"
   rm -rf "${TEMP_DIR}"
   exit
 }
@@ -18,12 +18,12 @@ IPA="/path/myapp.ipa"
 MOBILEPROVISION="/path/embedded.mobileprovision"
 SIGN_IDENTITY="11AAB23344CC22DD3FD023372312A600AA11DA78"
 BUNDLE_ID="com.mysite.myapp"
+FRIDA_URL="https://website.local/frida/ios/FridaGadget.dylib"
 
 ###
 # Setting extra variables
 ###
 VERBOSE=false
-FRIDA_URL="https://build.frida.re/frida/ios/lib/FridaGadget.dylib"
 
 ###
 # Preparing the environment
@@ -39,7 +39,7 @@ FRIDA_FILENAME="${FRIDA_URL##*/}"
 FRIDA_PATH="${TOOLS_DIR}/${FRIDA_FILENAME}"
 OUTFILE="patched-app.ipa"
 
-echo "[+] IPA patching started..."
+echo "[*] IPA patching started..."
 
 if [ ! -d "$TOOLS_DIR" ]; then
   echo "[+] Installing dependencies"
